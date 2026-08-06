@@ -1,0 +1,38 @@
+div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+button{
+
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: white;
+    padding: 20px;
+    border: none;
+    transition: 0.4s ease;
+}
+
+button:hover {
+    background: rgba(199, 198, 198, 0.274);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+    
+
+
+#botoes{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 16px; 
+}

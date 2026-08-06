@@ -1,0 +1,30 @@
+:host{
+    display: flex;
+    gap: 16px;
+}
+
+div{
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    margin: 20px auto;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+div:hover{
+    background: rgba(199, 198, 198, 0.274);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.322);
+    padding: 20px;
+    transform: scale(1.02);
+}
