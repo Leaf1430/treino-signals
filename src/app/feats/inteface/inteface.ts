@@ -16,8 +16,8 @@ export class Inteface {
 
   lucas = signal<Usuario>({
     id: "Luacas12",
-    nome: "Rafael",
-    idade: 22,
+    nome: "Lucas",
+    idade: 12,
   }) 
 
   felipe = signal<Usuario>({

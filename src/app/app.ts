@@ -4,11 +4,13 @@ import { Feats } from "./feats/feats";
 import { Inteface } from "./feats/inteface/inteface";
 import { Incrementar } from "./feats/incrementar/incrementar";
 import { AddImagens } from "./feats/add-imagens/add-imagens";
+import { SignalForms } from "./feats/signal-forms/signal-forms";
+import { Header } from "./feats/header/header";
 
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Feats, Inteface, Incrementar, AddImagens,],
+  imports: [RouterOutlet, Feats, Inteface, Incrementar, AddImagens, SignalForms, Header],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

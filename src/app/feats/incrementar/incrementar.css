@@ -3,11 +3,11 @@ div{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin: 30px auto;
     
 }
 
 button{
-
     background: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
     backdrop-filter: blur(10px);
@@ -17,15 +17,18 @@ button{
     padding: 20px;
     border: none;
     transition: 0.4s ease;
+    backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
 }
 
 button:hover {
-    background: rgba(199, 198, 198, 0.274);
-    border-radius: 10px;
+    background: rgba(248, 247, 247, 0.164);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    
 }
     
 
@@ -33,6 +36,7 @@ button:hover {
 #botoes{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-around;
     gap: 16px; 
 }
