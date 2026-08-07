@@ -1,3 +1,4 @@
+
 div{
     display: flex;
     justify-content: center;
@@ -9,18 +10,14 @@ div{
 
 button{
     background: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
+    border-radius: 20px;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     color: white;
     padding: 20px;
-    border: none;
     transition: 0.4s ease;
-    backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
     border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 16px;
 }
 
 button:hover {

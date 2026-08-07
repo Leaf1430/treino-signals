@@ -1,6 +1,7 @@
 import { Component, signal } from '@angular/core';
 import { Produto } from './produto';
 import { form, FormField } from '@angular/forms/signals';
+import { Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-signal-forms',
@@ -25,7 +26,9 @@ export class SignalForms {
 
     const produto = this.produtoModel();
 
-    console.log(produto)
+    console.log(produto);
+
+    this.produtos.update(valor => [...valor, produto]);
 
     this.produtoModel.set({
       titulo: '',
@@ -34,5 +37,7 @@ export class SignalForms {
     })
     
   }
+
+  protected produtos = signal<Produto[]>([]);
 
 }

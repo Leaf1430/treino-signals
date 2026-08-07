@@ -8,21 +8,31 @@ import { Usuario } from './usuario';
   styleUrl: './inteface.css',
 })
 export class Inteface {
-  rafael = signal<Usuario>({
-    id: "Leaf1430",
-    nome: "Rafael",
-    idade: 21
-  })
-
-  lucas = signal<Usuario>({
-    id: "Luacas12",
-    nome: "Lucas",
-    idade: 12,
-  }) 
-
-  felipe = signal<Usuario>({
-    id: "lipeipe",
-    nome: "Felipe",
-    idade: 19
-  })
+  protected readonly usuarios = signal<Usuario[]>([
+    {
+      id: 'Leaf1430',
+      nome: 'Rafael',
+      idade: 21
+    },
+    {
+      id: 'Maraia',
+      nome: 'Maria',
+      idade: 23
+    },
+    {
+      id: 'souzs',
+      nome: 'Souza',
+      idade: 18
+    },
+    {
+      id: 'fipeipe',
+      nome: 'Felipe',
+      idade: 13
+    },
+    {
+      id: 'vetoooor',
+      nome: 'Vitor',
+      idade: 20
+    }
+  ])
 }

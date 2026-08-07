@@ -1,11 +1,11 @@
 :host{
     display: flex;
-    gap: 10px;
+    flex-wrap: wrap;
 }
 
 div{
     background: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
+    border-radius: 20px;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -17,10 +17,8 @@ div{
     flex-direction: column;
     text-align: center;
     transition: 0.3s ease;
-    backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
     border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 16px;
+    width: 200px;
 }
 
 div:hover{
@@ -30,4 +28,8 @@ div:hover{
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.322);
     padding: 20px;
     transform: scale(1.02);
+}
+
+h1{
+    padding: 10px;
 }
