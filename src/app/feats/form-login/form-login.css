@@ -40,6 +40,11 @@ input:hover{
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+span{
+    font-size: .7rem;
+    color: rgb(184, 0, 0);
+    margin-left: 10px;
+}
 #login {
     position: relative;
     overflow: hidden;

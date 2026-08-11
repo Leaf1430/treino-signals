@@ -10,7 +10,7 @@ import { Usuario } from './usuario';
 export class Inteface {
   protected readonly usuarios = signal<Usuario[]>([
     {
-      id: 'Leaf1430',
+      id: 'Leaf',
       nome: 'Rafael',
       idade: 21
     },

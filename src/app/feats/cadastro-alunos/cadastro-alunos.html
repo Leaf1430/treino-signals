@@ -1,0 +1,16 @@
+<form (submit)="cadastroModel($event)">
+    <h1>Informações Aluno</h1>
+    <input type="text" [formField]="cadastroForm.nome" placeholder="Digite o nome do aluno">
+    <input type="text" [formField]="cadastroForm.media" placeholder="Digite a média">
+    <button (click)="cadastros()"></button>
+</form>
+
+<div>
+        @for (cadastro of cadastros(); Cadastro.nome) {
+            <div id="produto">
+                <h3>{{cadastros.nome}}</h3>
+                <p>{{cadastros.media}}</p>
+                <button id="deleta">Deletar</button>
+            </div>
+        }
+    </div>
