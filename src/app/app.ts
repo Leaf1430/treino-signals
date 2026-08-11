@@ -7,11 +7,12 @@ import { AddImagens } from "./feats/add-imagens/add-imagens";
 import { SignalForms } from "./feats/signal-forms/signal-forms";
 import { Header } from "./feats/header/header";
 import { Footer } from "./feats/footer/footer";
+import { FormLogin } from "./feats/form-login/form-login";
 
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Feats, Inteface, Incrementar, AddImagens, SignalForms, Header, Footer],
+  imports: [RouterOutlet, Feats, Inteface, Incrementar, AddImagens, SignalForms, Header, Footer, FormLogin],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

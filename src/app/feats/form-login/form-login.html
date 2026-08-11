@@ -1,0 +1,8 @@
+    <h1>Faça o login</h1>
+    <form (submit)="efetuarLogin($event)">
+        <input type="email" placeholder="Email" [formField]="loginForm.email">
+        <input type="text" placeholder="senha" [formField]="loginForm.senha">
+        <button id="login">Entrar</button>
+    </form>
+
+    <p>O usuário @if (!estalogado()) {não} está logado</p>

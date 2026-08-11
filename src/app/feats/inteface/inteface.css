@@ -1,9 +1,20 @@
 :host{
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 div{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 10px;
+}
+
+
+#usuario-card{
     background: rgba(255, 255, 255, 0.1);
     border-radius: 20px;
     backdrop-filter: blur(10px);
@@ -21,7 +32,7 @@ div{
     width: 200px;
 }
 
-div:hover{
+#usuario-card:hover{
     background: rgba(248, 247, 247, 0.164);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
