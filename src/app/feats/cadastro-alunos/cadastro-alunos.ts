@@ -1,7 +1,7 @@
 import { Component, signal } from '@angular/core';
 import { Cadastro } from './cadastro';
 import { Validators } from '@angular/forms';
-import { form, FormField } from '@angular/forms/signals';
+import { form, FormField, max, min, required } from '@angular/forms/signals';
 
 @Component({
   selector: 'app-cadastro-alunos',
@@ -12,27 +12,38 @@ import { form, FormField } from '@angular/forms/signals';
 export class CadastroAlunos {
 
 
-  cadastroModel = signal<Cadastro> ({
+  alunoModel = signal<Cadastro> ({
     nome: '',
     media: null
-  })
+  });
 
-  cadastroForm = form(this.cadastroModel);
+  protected alunoForm = form(this.alunoModel, (s) =>{
+     
+    required(s.nome, {message: 'O nome do aluno é obrigatório'} );
 
-  cadastrarAluno(event : SubmitEvent) {
+    required(s.media, {message: 'A média é obrigatória'})
+
+    min(s.media, 0, {message:'Média não pode ser menor do que 0'})
+
+    max(s.media, 10, {message: 'Média não pode ser maior que 10'})
+
+  });
+
+  protected alunos = signal<Cadastro[]>([]);
+
+  protected cadastrarAluno(event : SubmitEvent) {
     event.preventDefault();
 
-    const cadastro = this.cadastroModel();
+    const cadastro = this.alunoModel();
 
-    console.log(cadastro);
+    this.alunos.update(valor => [...valor, cadastro]);
 
-    this.cadastros.update(valor => (...media, cadastro));
-
-    this.cadastroModel.set({
+    this.alunoModel.set({
       nome: '',
       media: null
     })
-  }
 
-  protected cadastros = signal<Cadastro[]>([]);
+    this.alunoForm().reset();
+
+  }
 }

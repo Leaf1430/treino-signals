@@ -8,11 +8,12 @@ import { SignalForms } from "./feats/signal-forms/signal-forms";
 import { Header } from "./feats/header/header";
 import { Footer } from "./feats/footer/footer";
 import { FormLogin } from "./feats/form-login/form-login";
+import { CadastroAlunos } from "./feats/cadastro-alunos/cadastro-alunos";
 
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Feats, Inteface, Incrementar, AddImagens, SignalForms, Header, Footer, FormLogin],
+  imports: [RouterOutlet, Feats, Inteface, Incrementar, AddImagens, SignalForms, Header, Footer, FormLogin, CadastroAlunos],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
