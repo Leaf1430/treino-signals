@@ -1,5 +1,6 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { Usuario } from './usuario';
+import { InterfaceService } from './interface-service';
 
 @Component({
   selector: 'app-inteface',
@@ -8,31 +9,5 @@ import { Usuario } from './usuario';
   styleUrl: './inteface.css',
 })
 export class Inteface {
-  protected readonly usuarios = signal<Usuario[]>([
-    {
-      id: 'Leaf',
-      nome: 'Rafael',
-      idade: 21
-    },
-    {
-      id: 'Maraia',
-      nome: 'Maria',
-      idade: 23
-    },
-    {
-      id: 'souzs',
-      nome: 'Souza',
-      idade: 18
-    },
-    {
-      id: 'fipeipe',
-      nome: 'Felipe',
-      idade: 13
-    },
-    {
-      id: 'vetoooor',
-      nome: 'Vitor',
-      idade: 20
-    }
-  ])
+  InterfaceService = inject(InterfaceService)
 }
