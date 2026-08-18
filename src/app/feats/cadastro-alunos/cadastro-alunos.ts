@@ -1,7 +1,8 @@
-import { Component, signal } from '@angular/core';
+import { Component, Inject, inject, signal } from '@angular/core';
 import { Cadastro } from './cadastro';
 import { Validators } from '@angular/forms';
 import { form, FormField, max, min, required } from '@angular/forms/signals';
+import { CadastroAlunosService } from './cadastro-alunos-service';
 
 @Component({
   selector: 'app-cadastro-alunos',
@@ -10,6 +11,8 @@ import { form, FormField, max, min, required } from '@angular/forms/signals';
   styleUrl: './cadastro-alunos.css',
 })
 export class CadastroAlunos {
+
+  cadastroAlunosService = inject(CadastroAlunosService)
 
 
   alunoModel = signal<Cadastro> ({
@@ -29,14 +32,15 @@ export class CadastroAlunos {
 
   });
 
-  protected alunos = signal<Cadastro[]>([]);
+  //protected alunos = signal<Cadastro[]>([]);
 
   protected cadastrarAluno(event : SubmitEvent) {
     event.preventDefault();
 
     const cadastro = this.alunoModel();
 
-    this.alunos.update(valor => [...valor, cadastro]);
+    this.cadastroAlunosService.cadastrarAluno(cadastro);
+
 
     this.alunoModel.set({
       nome: '',

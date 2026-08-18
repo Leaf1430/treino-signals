@@ -22,7 +22,7 @@
 </form>
 
 <div>
-    @for (aluno of alunos(); track aluno.nome) {
+    @for (aluno of cadastroAlunosService.alunos(); track aluno.nome) {
 
         <div id="cadastro">
                 <p>{{aluno.nome}}</p>
@@ -31,7 +31,7 @@
             @if (aluno.media !== null) {
 
                @if (aluno.media >= 7) {
-                <p style="color: green;">Aprovado</p>
+                <p style="color: rgb(7, 255, 7);">Aprovado</p>
             } @else {
                 <p style="color: red;">Reprovado</p>
             } 
