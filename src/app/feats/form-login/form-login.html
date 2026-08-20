@@ -8,7 +8,7 @@
             }
         }
 
-        <input type="text" placeholder="senha" [formField]="loginForm.senha">
+        <input type="password" placeholder="senha" [formField]="loginForm.senha">
         @if (loginForm.senha().touched() && loginForm.senha().invalid()) {
             @for (error of loginForm.senha().errors(); track error.kind) {
                 <span>{{error.message}}</span>
@@ -18,4 +18,4 @@
 
     </form>
 
-    <p>O usuário @if (!estalogado()) {não} está logado</p>
+    <p>O usuário @if (!estaLogado()) {não} está logado</p>
