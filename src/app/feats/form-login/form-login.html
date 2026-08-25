@@ -1,0 +1,21 @@
+    <h1>Faça o login</h1>
+    <form (submit)="efetuarLogin($event)">
+
+        <input type="email" placeholder="Email" [formField]="loginForm.email">
+        @if (loginForm.email().touched() && loginForm.email().invalid()) {
+            @for (error of loginForm.email().errors(); track error.kind) {
+                <span>{{error.message}}</span>
+            }
+        }
+
+        <input type="password" placeholder="senha" [formField]="loginForm.senha">
+        @if (loginForm.senha().touched() && loginForm.senha().invalid()) {
+            @for (error of loginForm.senha().errors(); track error.kind) {
+                <span>{{error.message}}</span>
+            }
+        }
+        <button id="login">Entrar</button>
+
+    </form>
+
+    <p>O usuário @if (!estaLogado()) {não} está logado</p>

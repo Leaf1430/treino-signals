@@ -1,0 +1,10 @@
+<h1>Users</h1>
+<div>
+   @for (usuario of InterfaceService.usuarios(); track usuario.id) {
+    <div id="usuario-card">
+        <h1>{{usuario.id}}</h1>
+        <p>{{usuario.nome}}</p>
+        <p>{{usuario.idade}}</p>
+    </div>
+   }
+</div>
