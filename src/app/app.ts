@@ -13,11 +13,12 @@ import { ExemploPost } from "./feats/exemplo-post/exemplo-post";
 import { ExemploPut } from "./feats/exemplo-put/exemplo-put";
 import { ExemploDelete } from "./feats/exemplo-delete/exemplo-delete";
 import { ExemploGet } from "./feats/exemplo-get/exemplo-get";
+import { UserList } from "./feats/user-list/user-list";
 
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Feats, Inteface, Incrementar, AddImagens, SignalForms, Header, Footer, FormLogin, CadastroAlunos, ExemploPost, ExemploPut, ExemploDelete, ExemploGet],
+  imports: [RouterOutlet, Feats, Inteface, Incrementar, AddImagens, SignalForms, Header, Footer, FormLogin, CadastroAlunos, ExemploPost, ExemploPut, ExemploDelete, ExemploGet, UserList],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

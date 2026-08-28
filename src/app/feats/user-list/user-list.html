@@ -1,0 +1,20 @@
+<section class="exemplo-get">
+    <h2>Lista de Usuários</h2>
+    <button (click)="recarregarUsuarios()">Recarregar</button>
+    <div class="gets">
+        @if (userService.userDetails.isLoading()) {
+            <p>Carregando...</p>
+        } @else if (userService.userDetails.error()) {
+            <p>Deu erro</p>
+        } @else if (userService.userDetails.hasValue()) {
+            @for (user of userService.userDetails.value(); track user.id) {
+                <div class="card">
+                    <h3>{{user.name}}</h3>
+                    <p><strong>Username:</strong> &#64;{{ user.username }}</p>
+                    <p><strong>Email:</strong> {{ user.email }}</p>
+                    <p><strong>Telefone:</strong> {{ user.phone }}</p>
+                </div>
+            }
+        }
+    </div>
+</section>

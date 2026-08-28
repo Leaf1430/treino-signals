@@ -25,7 +25,7 @@
     margin: 0 auto;
 }
 
-.get{
+.card{
     background: rgba(255, 255, 255, 0.1);
     border-radius: 20px;
     backdrop-filter: blur(10px);
@@ -43,7 +43,7 @@
     width: 200px;
 }
 
-.get:hover{
+.card:hover{
     background: rgba(248, 247, 247, 0.164);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
@@ -85,7 +85,6 @@ button::before {
     transition: opacity 0.5s ease;
     z-index: -1; 
 }
-
 
 button:hover::before {
     opacity: 1;
