@@ -1,4 +1,4 @@
-export interface IntefaceDelete {
+export interface PutResponse {
     id: number | null;
     userId: number | null; 
     title: string;
